@@ -1,0 +1,102 @@
+<ion-content>
+  <div class="top-header">
+    <div id="header">
+      <ion-buttons>
+        <ion-button id="position" routerLink="/dashboard">
+          <ion-icon slot="start" name="chevron-back-circle-outline"></ion-icon>
+          Edit profile
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <!-- profile content -->
+  <div id="card">
+    <div id="image">
+      <img id="img" src="../../../assets/Dr. Usman Yousaf.jpeg">
+    </div>
+
+    <!-- user form -->
+    <form [formGroup]="updateForm" (ngSubmit)="update()">
+      <div id="title">
+        <h4>Basic detail</h4>
+      </div>
+      <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="person-outline"></ion-icon>
+          <ion-input id="input" formControlName="fName" placeholder="first name"></ion-input>
+
+          <ion-icon id="icon" name="person-outline"></ion-icon>
+          <ion-input id="input" formControlName="lName" placeholder="last name"></ion-input>
+        </ion-item>
+      </ion-card>
+      <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="calendar-outline"></ion-icon>
+          <ion-input type="date" formControlName="date" id="input" placeholder="date of birth"></ion-input>
+        </ion-item>
+      </ion-card>
+      <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="transgender-outline"></ion-icon>
+          <ion-select id="input" formControlName="gender" placeholder="gender">
+            <ion-select-option value="f">Female</ion-select-option>
+            <ion-select-option value="m">Male</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-card>
+
+
+      <!-- contact details -->
+      <div id="title">
+        <h4>Contact detail</h4>
+      </div>
+      <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="mail-outline"></ion-icon>
+          <ion-input type="email" formControlName="email" id="input" placeholder="email"></ion-input>
+        </ion-item>
+      </ion-card>
+      <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="call-outline"></ion-icon>
+          <ion-input type="number" formControlName="contactNo" id="input" placeholder="phone number"></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <!-- Update password -->
+      <div id="title">
+        <h4>Update password</h4>
+      </div>
+      <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="lock-open-outline"></ion-icon>
+          <ion-input type="password" formControlName="password" id="input" placeholder="password"></ion-input>
+        </ion-item>
+      </ion-card>
+      <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="lock-closed-outline"></ion-icon>
+          <ion-input type="password" formControlName="confirmPass" id="input" placeholder="re-type password"></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <div id="button-container">
+        <ion-button expand="block" type="submit" size="small">Update</ion-button>
+      </div>
+    </form>
+
+  </div>
+</ion-content>
+
+
+      <!-- <ion-card id="around-wrapper">
+        <ion-item id="custom-wrapper" class="col">
+          <ion-icon id="icon" name="person-outline"></ion-icon>
+          <ion-input id="input" placeholder="first name"></ion-input>
+        </ion-item>
+        <ion-item id="custom-wrapper" class="col">
+          <ion-icon id="icon" name="person-outline"></ion-icon>
+          <ion-input id="input" placeholder="first name"></ion-input>
+        </ion-item>
+      </ion-card> -->

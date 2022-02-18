@@ -1,0 +1,328 @@
+
+
+
+
+
+<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+  
+    <div class="c-sidebar-brand d-lg-down-none">
+      <h2>DAWS</h2>
+    </div>
+    <ul class="c-sidebar-nav">
+     
+      <li class="c-sidebar-nav-title">Administration</li>
+      <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle"
+          >
+          <svg class="c-sidebar-nav-icon">
+            <use xlink:href="assets/icons/svg/free.svg#cil-puzzle"></use>
+          </svg> Doctors</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/addDoctor'><span class="c-sidebar-nav-icon"></span>
+              Add A Doctor</a>
+          </li>
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink=''><span class="c-sidebar-nav-icon"></span>
+              List Doctors</a></li>
+          
+        </ul>
+      </li>
+      <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle"
+          href="">
+          <svg class="c-sidebar-nav-icon">
+            <use xlink:href="assets/icons/svg/free.svg#cil-cursor"></use>
+          </svg> Users</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/viewUsers'><span class="c-sidebar-nav-icon"></span>
+              View Users</a></li>
+          
+        </ul>
+      </li>
+     
+      
+      <li class="c-sidebar-nav-divider"></li>
+      <li class="c-sidebar-nav-title">Extras</li>
+      <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle"
+        >
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="assets/icons/svg/free.svg#cil-star"></use>
+        </svg> Pages</a>
+      <ul class="c-sidebar-nav-dropdown-items">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/adminProfile' target="_top">
+            <svg class="c-sidebar-nav-icon">
+              <use xlink:href="assets/icons/svg/free.svg#cil-account-logout"></use>
+            </svg> Admin Profile</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='' target="_top">
+            <svg class="c-sidebar-nav-icon">
+              <use xlink:href="assets/icons/svg/free.svg#cil-account-logout"></use>
+            </svg> Lock Account</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='' target="_top">
+            <svg class="c-sidebar-nav-icon">
+              <use xlink:href="assets/icons/svg/free.svg#cil-bug"></use>
+            </svg> Sign Out</a></li>
+        
+      </ul>
+    </li>
+     
+    </ul>
+    <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
+      data-class="c-sidebar-minimized"></button>
+  </div>
+  <div class="c-wrapper c-fixed-components">
+    <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
+      <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
+        data-class="c-sidebar-show">
+        <svg class="c-icon c-icon-lg">
+          <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+        </svg>
+      </button><a class="c-header-brand d-lg-none" routerLink=''>
+        DAWS</a>
+      <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar"
+        data-class="c-sidebar-lg-show" responsive="true">
+        <svg class="c-icon c-icon-lg">
+          <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+        </svg>
+      </button>
+     
+      <ul class="c-header-nav ml-auto mr-4">
+        <!--Notification Bell for admin to see new alerts-->
+        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" routerLink=''>
+            <svg class="c-icon">
+              <use xlink:href="assets/icons/svg/free.svg#cil-bell"></use>
+            </svg></a></li>
+        
+            <!--Admin Proile and Managenent-->
+        <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown"  role="button"
+            aria-haspopup="true" aria-expanded="false">
+            <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="adminProfile"></div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right pt-0">
+            <div class="dropdown-header bg-light py-2"><strong  >Notification</strong></div><a class="dropdown-item">
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-bell"></use>
+              </svg> New User<span class="badge badge-info ml-auto">4</span></a><a class="dropdown-item" >
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-envelope-open"></use>
+              </svg> New Booking<span class="badge badge-success ml-auto">3</span></a><a class="dropdown-item" >
+              
+              </a>
+            <div class="dropdown-header bg-light py-2"><strong>Settings</strong></div><a class="dropdown-item">
+              <svg class="c-icon mr-2"> 
+                <use xlink:href="assets/icons/svg/free.svg#cil-user"></use>
+              </svg> Profile</a><a class="dropdown-item" routerLink='/adminProfile'></a>
+            <div class="dropdown-divider"></div><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-lock-locked"></use>
+              </svg> Lock Account</a><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-account-logout"></use>
+              </svg> Logout</a>
+          </div>
+        </li>
+      </ul>
+      
+    </header>
+    <div class="c-body">
+      <main class="c-main">
+        <div class="container-fluid">
+          <div class="fade-in">
+            <!--Every section must come here for the body of the design-->  
+            
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row flex-lg-nowrap">
+  <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
+    <div class="card p-3">
+      <div class="e-navlist e-navlist--active-bg">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link px-2 active" href="#"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Overview</span></a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-crud-users" target="__blank"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page" target="__blank"><i class="fa fa-fw fa-cog mr-1"></i><span>Settings</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="row">
+      <div class="col mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="e-profile">
+              <div class="row">
+                <div class="col-12 col-sm-auto mb-3">
+                  <div class="mx-auto" style="width: 140px;">
+                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                  <div class="text-center text-sm-left mb-2 mb-sm-0">
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4>
+                    <p class="mb-0">@johnny.s</p>
+                    <div class="text-muted"><small>Last seen 2 hours ago</small></div>
+                    <div class="mt-2">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fa fa-fw fa-camera"></i>
+                        <span>Change Photo</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="text-center text-sm-right">
+                    <span class="badge badge-secondary">administrator</span>
+                    <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
+                  </div>
+                </div>
+              </div>
+              <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="" class="active nav-link">Settings</a></li>
+              </ul>
+              <div class="tab-content pt-3">
+                <div class="tab-pane active">
+                  <form class="form" [formGroup]="updateUser" (ngSubmit)="onSubmit()"  novalidate="">
+                    <div class="row">
+                      <div class="col">
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>First Name</label>
+                              <input class="form-control" id="first_name" type="text" name="first_name" formControlName="first_name" placeholder="John Smith" value="John Smith">
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Last Name</label>
+                              <input class="form-control" id="last_name" type="text" name="last_name" formControlName="last_name"placeholder="johnny.s" value="johnny.s">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label>Gender</label>
+                                <input class="form-control" id="gender" type="text" name="gender" formControlName="gender" placeholder="John Smith" value="John Smith">
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                <label>Phone number</label>
+                                <input class="form-control" id="phone_number" type="text" name="phone_number" formControlName="phone_number" placeholder="johnny.s" value="johnny.s">
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Email</label>
+                              <input class="form-control" id="email" type="email" name="email" formControlName="email"placeholder="user@example.com">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="row">
+                          <div class="col mb-3">
+                            <div class="form-group">
+                              <label>About</label>
+                              <textarea class="form-control" rows="5" placeholder="My Bio"></textarea>
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                    <!-- <div class="row">
+                      <div class="col-12 col-sm-6 mb-3">
+                        <div class="mb-2"><b>Change Password</b></div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Current Password</label>
+                              <input class="form-control" type="password" placeholder="••••••">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>New Password</label>
+                              <input class="form-control" type="password" placeholder="••••••">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
+                              <input class="form-control" type="password" placeholder="••••••"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-5 offset-sm-1 mb-3">
+                        <div class="mb-2"><b>Keeping in Touch</b></div>
+                        <div class="row">
+                          <div class="col">
+                            <label>Email Notifications</label>
+                            <div class="custom-controls-stacked px-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="notifications-blog" checked="">
+                                <label class="custom-control-label" for="notifications-blog">Blog posts</label>
+                              </div>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="notifications-news" checked="">
+                                <label class="custom-control-label" for="notifications-news">Newsletter</label>
+                              </div>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="notifications-offers" checked="">
+                                <label class="custom-control-label" for="notifications-offers">Personal Offers</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <div class="row">
+                      <div class="col d-flex justify-content-end">
+                        <button class="btn btn-primary" type="submit">Save Changes</button>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 mb-3">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="px-xl-3">
+              <button class="btn btn-block btn-secondary">
+                <i class="fa fa-sign-out"></i>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title font-weight-bold">Support</h6>
+            <p class="card-text">Get fast, free help from our friendly assistants.</p>
+            <button type="button" class="btn btn-primary">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+  
+        </div>
+    </div>
+  </main>
+  <footer class="c-footer">
+    <div><a href="">DAS</a> © 2021 DAS.</div>
+    <div class="ml-auto">Powered by <a href=""></a></div>
+  </footer>
+</div>
+</div>

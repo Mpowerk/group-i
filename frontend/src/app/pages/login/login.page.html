@@ -1,0 +1,29 @@
+<ion-content class="ion-padding">
+  <h1>Hello Again,</h1>
+  <h5>Welcome back you've been missed!</h5>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+    <div style="color: red; padding-bottom: 10px;" *ngIf="currentError">
+      {{ currentError }}
+    </div>
+
+    <ion-card id="around-wrapper">
+      <ion-item id="custom-wrapper">
+        <ion-icon id="icon" name="mail-outline"></ion-icon>
+        <ion-input type="email" id="input" placeholder="email" formControlName="email"></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card id="around-wrapper">
+      <ion-item id="custom-wrapper">
+        <ion-icon id="icon" name="lock-closed-outline"></ion-icon>
+        <ion-input type="password" id="input" placeholder="password" formControlName="password"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <a routerLink="#" class="forgot-password-link">Forgot Password?</a>
+
+    <ion-button type="submit" expand="block">Login</ion-button>
+  </form>
+  <p class="footer-text">I'm a new user, <a routerLink="/register">Sign Up</a></p>
+</ion-content>

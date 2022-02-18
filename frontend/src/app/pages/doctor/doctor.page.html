@@ -1,0 +1,86 @@
+<ion-content>
+  <div class="top-header">
+    <div id="header">
+      <ion-buttons>
+        <ion-button id="position" routerLink="/dashboard">
+          <ion-icon slot="start" name="chevron-back-circle-outline"></ion-icon>
+          Schedule
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <!-- Doctor detail -->
+  <div id="wrapper" *ngIf="currentDoctor != null">
+    <ion-card id="card">
+      <img id="image" src="../../../assets/Dr. Usman Yousaf.jpeg" alt="" class="img">
+      <div id="info">
+        <h2>Dr 
+          <span style="letter-spacing: 1px">{{ currentDoctor.first_name }}</span>
+          <span style="letter-spacing: 1px; margin-left: 5px">{{ currentDoctor.last_name }}</span>
+        </h2>
+        <p>Heart Specialis</p>
+      </div>   
+    </ion-card>
+
+    <ion-card id="about">
+      <ion-card-header>
+        <ion-card-title>About</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{ currentDoctor.about }}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Location</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{ currentDoctor.address }}
+      </ion-card-content>
+
+    </ion-card>
+    <ion-button expand="block" size="small" id="trigger-button">Book Appointment</ion-button>
+  </div>
+</ion-content>
+
+
+
+<ion-modal trigger="trigger-button">
+  <ng-template>
+    <ion-content>
+      <ion-card  id="gap-between">
+        
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="calendar"></ion-icon>
+          <ion-select id="input" placeholder="Date picker">
+            <ion-select-option value="f">15/02/2022</ion-select-option>
+            <ion-select-option value="m">16/02/2022</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+      </ion-card>
+
+      <ion-card id="gap-between">
+        <ion-item id="custom-wrapper">
+          <ion-icon id="icon" name="time"></ion-icon>
+          <ion-select id="input" placeholder="Time picker">
+            <ion-select-option value="f">09H00</ion-select-option>
+            <ion-select-option value="m">10H00</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-card>
+
+    
+      <div id="group-buttons">
+        <ion-button id="cancel">Cancel</ion-button>
+        <ion-button id="reschedule" routerLink="/dashboard">Confirm</ion-button>
+      </div>
+
+      <ion-card id="decorator"></ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>

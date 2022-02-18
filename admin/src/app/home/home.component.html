@@ -1,0 +1,309 @@
+
+
+<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+  
+    <div class="c-sidebar-brand d-lg-down-none">
+      <h2>DAWS</h2>
+    </div>
+    <ul class="c-sidebar-nav">
+      
+      <li class="c-sidebar-nav-title">Administration</li>
+      <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle"
+          >
+          <svg class="c-sidebar-nav-icon">
+            <use xlink:href="assets/icons/svg/free.svg#cil-puzzle"></use>
+          </svg> Doctors</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/addDoctor'><span class="c-sidebar-nav-icon"></span>
+              Add A Doctor</a>
+          </li>
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/viewDoctors'><span class="c-sidebar-nav-icon"></span>
+              View Doctors</a></li>
+          
+        </ul>
+      </li>
+      <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle"
+          href="">
+          <svg class="c-sidebar-nav-icon">
+            <use xlink:href="assets/icons/svg/free.svg#cil-cursor"></use>
+          </svg> Users</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/viewUsers'><span class="c-sidebar-nav-icon"></span>
+              View Users</a></li>
+          
+        </ul>
+      </li>
+     
+      
+      <li class="c-sidebar-nav-divider"></li>
+      
+     
+    </ul>
+    <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
+      data-class="c-sidebar-minimized"></button>
+  </div>
+  <div class="c-wrapper c-fixed-components">
+    <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
+      <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
+        data-class="c-sidebar-show">
+        <svg class="c-icon c-icon-lg">
+          <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+        </svg>
+      </button><a class="c-header-brand d-lg-none" routerLink=''>
+        DAWS</a>
+      <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar"
+        data-class="c-sidebar-lg-show" responsive="true">
+        <svg class="c-icon c-icon-lg">
+          <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+        </svg>
+      </button>
+     
+      <ul class="c-header-nav ml-auto mr-4">
+        <!--Notification Bell for admin to see new alerts-->
+        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" routerLink=''>
+            <svg class="c-icon">
+              <use xlink:href="assets/icons/svg/free.svg#cil-bell"></use>
+            </svg></a></li>
+        
+            <!--Admin Proile and Managenent-->
+        <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown"  role="button"
+            aria-haspopup="true" aria-expanded="false">
+            <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="adminProfile"></div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right pt-0">
+            <div class="dropdown-header bg-light py-2"><strong  >Notification</strong></div><a class="dropdown-item">
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-bell"></use>
+              </svg> New User<span class="badge badge-info ml-auto">4</span></a><a class="dropdown-item" >
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-envelope-open"></use>
+              </svg> New Booking<span class="badge badge-success ml-auto">3</span></a><a class="dropdown-item" >
+              
+              </a>
+            <div class="dropdown-header bg-light py-2"><strong>Settings</strong></div><a class="dropdown-item">
+              <svg class="c-icon mr-2"> 
+                <use xlink:href="assets/icons/svg/free.svg#cil-user"></use>
+              </svg> Profile</a><a class="dropdown-item" routerLink='/adminProfile'></a>
+            <div class="dropdown-divider"></div><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-lock-locked"></use>
+              </svg> Lock Account</a><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-account-logout"></use>
+              </svg> Logout</a>
+          </div>
+        </li>
+      </ul>
+      
+    </header>
+    <div class="c-body">
+      <main class="c-main">
+        <div class="container-fluid">
+          <div class="fade-in">
+            <div class="row">
+              <div class="col-sm-6 col-lg-4">
+                <div class="card text-white bg-primary">
+                  <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <div class="text-value-lg">5</div>
+                      <div>Registered Doctors</div>
+                    </div>
+                    <div class="btn-group">
+                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <svg class="c-icon">
+                          <use xlink:href="assets/icons/svg/free.svg#cil-settings"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" routerLink=''>Action</a><a
+                          class="dropdown-item" routerLink=''>Another action</a><a class="dropdown-item" routerLink=''>Something
+                          else here</a></div>
+                    </div>
+                  </div>
+                  <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
+                    <canvas class="chart" id="card-chart1" height="70"></canvas>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-sm-6 col-lg-4">
+                <div class="card text-white bg-info">
+                  <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <div class="text-value-lg">50</div>
+                      <div>Registered Users</div>
+                    </div>
+                    <div class="btn-group">
+                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <svg class="c-icon">
+                          <use xlink:href="assets/icons/svg/free.svg#cil-settings"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" routerLink=''>Action</a><a
+                          class="dropdown-item" routerLink=''>Another action</a><a class="dropdown-item" routerLink=''>Something
+                          else here</a></div>
+                    </div>
+                  </div>
+                  <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
+                    <canvas class="chart" id="card-chart2" height="70"></canvas>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-sm-6 col-lg-4">
+                <div class="card text-white bg-warning">
+                  <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <div class="text-value-lg">21</div>
+                      <div>Confirmed Appointments</div>
+                    </div>
+                    <div class="btn-group">
+                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <svg class="c-icon">
+                          <use xlink:href="assets/icons/svg/free.svg#cil-settings"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" routerLink=''>Action</a><a
+                          class="dropdown-item" routerLink=''>Another action</a><a class="dropdown-item" routerLink=''>Something
+                          else here</a></div>
+                    </div>
+                  </div>
+                  <div class="c-chart-wrapper mt-3" style="height:70px;">
+                    <canvas class="chart" id="card-chart3" height="70"></canvas>
+                  </div>
+                </div>
+              </div>
+  
+              
+  
+            </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">Traffic</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="c-callout c-callout-info"><small class="text-muted">Total Users</small>
+                              <div class="text-value-lg">9,123</div>
+                            </div>
+                          </div>
+  
+                          <div class="col-6">
+                            <div class="c-callout c-callout-danger"><small class="text-muted">Deactivated Users</small>
+                              <div class="text-value-lg">22,643</div>
+                            </div>
+                          </div>
+  
+                        </div>
+  
+                        <hr class="mt-0">
+
+                        <div class="progress-group">
+                            <div class="progress-group-header">
+                              <svg class="c-icon progress-group-icon">
+                                <use xlink:href="assets/icons/svg/free.svg#cil-user"></use>
+                              </svg>
+                              <div>Male</div>
+                              <div class="mfs-auto font-weight-bold">43%</div>
+                            </div>
+                            <div class="progress-group-bars">
+                              <div class="progress progress-xs">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 43%"
+                                  aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="progress-group mb-5">
+                            <div class="progress-group-header">
+                              <svg class="c-icon progress-group-icon">
+                                <use xlink:href="assets/icons/svg/free.svg#cil-user-female"></use>
+                              </svg>
+                              <div>Female</div>
+                              <div class="mfs-auto font-weight-bold">37%</div>
+                            </div>
+                            <div class="progress-group-bars">
+                              <div class="progress progress-xs">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 43%"
+                                  aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                        
+                        
+                        
+                      </div>
+  
+                      <div class="col-sm-6">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="c-callout c-callout-warning"><small class="text-muted">Confirmed Appointments</small>
+                              <div class="text-value-lg">78,623</div>
+                            </div>
+                          </div>
+  
+                          <!-- <div class="col-6">
+                            <div class="c-callout c-callout-success"><small class="text-muted">Organic</small>
+                              <div class="text-value-lg">49,123</div>
+                            </div>
+                          </div> -->
+  
+                        </div>
+  
+                        <hr class="mt-0">
+                      </div>
+  
+                    </div>
+                    <br>
+                    <table class="table table-responsive-sm table-hover table-outline mb-0">
+                      <thead class="thead-light">
+                        <tr>
+                          <th class="text-center">
+                            <svg class="c-icon">
+                              <use xlink:href="assets/icons/svg/free.svg#cil-people"></use>
+                            </svg>
+                          </th>
+                          <th>Top rated Doctor</th>
+                          <th>Recorded Bookings</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-center">
+                            <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/1.jpg"
+                                alt="user@email.com"><span class="c-avatar-status bg-success"></span></div>
+                          </td>
+                          <td>
+                            <div>Yiorgos Avraamu</div>
+                            <div class="small text-muted"><span>New</span> | Registered: Oct 1, 2021</div>
+                          </td>
+                        
+                          <td>
+                            <div class="small text-muted">Current </div><strong>44</strong>
+                          </td>
+                        </tr>
+
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+  
+          </div>
+        </div>
+      </main>
+      <footer class="c-footer">
+        <div><a href="">Doctors Appointment </a> © 2021 DAWS.</div>
+        <div class="ml-auto">Powered by <a href="">DAWS</a></div>
+      </footer>
+    </div>
+  </div>

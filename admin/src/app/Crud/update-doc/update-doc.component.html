@@ -1,0 +1,196 @@
+<!--Main nav design code--->
+
+
+
+
+<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+  
+    <div class="c-sidebar-brand d-lg-down-none">
+      <h2>DAWS</h2>
+    </div>
+    <ul class="c-sidebar-nav">
+     
+      <li class="c-sidebar-nav-title">Administration</li>
+      <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle"
+          >
+          <svg class="c-sidebar-nav-icon">
+            <use xlink:href="assets/icons/svg/free.svg#cil-puzzle"></use>
+          </svg> Doctors</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/addDoctor'><span class="c-sidebar-nav-icon"></span>
+              Add A Doctor</a>
+          </li>
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink=''><span class="c-sidebar-nav-icon"></span>
+              List Doctors</a></li>
+          
+        </ul>
+      </li>
+      <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle"
+          href="">
+          <svg class="c-sidebar-nav-icon">
+            <use xlink:href="assets/icons/svg/free.svg#cil-cursor"></use>
+          </svg> Users</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink='/viewUsers'><span class="c-sidebar-nav-icon"></span>
+              View Users</a></li>
+          
+        </ul>
+      </li>
+     
+      
+      <li class="c-sidebar-nav-divider"></li>
+      
+     
+    </ul>
+    <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
+      data-class="c-sidebar-minimized"></button>
+  </div>
+  <div class="c-wrapper c-fixed-components">
+    <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
+      <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
+        data-class="c-sidebar-show">
+        <svg class="c-icon c-icon-lg">
+          <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+        </svg>
+      </button><a class="c-header-brand d-lg-none" routerLink=''>
+        Therichpost</a>
+      <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar"
+        data-class="c-sidebar-lg-show" responsive="true">
+        <svg class="c-icon c-icon-lg">
+          <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+        </svg>
+      </button>
+      
+      <ul class="c-header-nav ml-auto mr-4">
+        
+        <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" routerLink='' role="button"
+            aria-haspopup="true" aria-expanded="false">
+            <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"></div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right pt-0">
+            <div class="dropdown-header bg-light py-2"><strong>Notification</strong></div><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-bell"></use>
+              </svg> New User<span class="badge badge-info ml-auto">4</span></a><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-envelope-open"></use>
+              </svg> New Booking<span class="badge badge-success ml-auto">3</span></a><a class="dropdown-item" routerLink=''>
+              
+              </a>
+            <div class="dropdown-header bg-light py-2"><strong>Settings</strong></div><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2"> 
+                <use xlink:href="assets/icons/svg/free.svg#cil-user"></use>
+              </svg> Profile</a><a class="dropdown-item" routerLink=''></a>
+            <div class="dropdown-divider"></div><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-lock-locked"></use>
+              </svg> Lock Account</a><a class="dropdown-item" routerLink=''>
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/icons/svg/free.svg#cil-account-logout"></use>
+              </svg> Logout</a>
+          </div>
+        </li>
+      </ul>
+      
+    </header>
+    <div class="c-body">
+      <main class="c-main">
+        <div class="container-fluid">
+          <div class="fade-in">
+
+
+            <div class="container-xl px-4 mt-4">
+                <!-- Account page navigation-->
+                
+                <!--<hr class="mt-0 mb-4">-->
+                <div class="row"> 
+                    
+                    <div class="col-xl-8">
+                        <!-- Account details card-->
+                        <div class="card mb-4">
+                            <div class="card-header">Doctor Details</div>
+                            <div class="card-body">
+                                <form [formGroup]="updateDoctor" (ngSubmit)="onSubmit()">
+                                    <!-- Form Group (username)-->
+                                    <div class="mb-3">
+                                        <label class="small mb-1" for="speciality">Speciality</label>
+                                        <input class="form-control" id="speciality" formControlName="speciality" type="text" placeholder="Enter the speciality" value="">
+                                    </div>
+                                    <!-- Form Row-->
+                                    <div class="row gx-3 mb-3">
+                                        <!-- Form Group (first name)-->
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="first_name">First name</label>
+                                            <input class="form-control" id="first_name" formControlName="first_name" type="text" placeholder="Enter your first name" value="">
+                                        </div>
+                                        <!-- Form Group (last name)-->
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="last_name">Last name</label>
+                                            <input class="form-control" id="last_name" formControlName="last_name"type="text" placeholder="Enter your last name" value="">
+                                        </div>
+                                    </div>
+                                    <!-- Form Row        -->
+                                    <div class="row gx-3 mb-3">
+                                        <!-- Form Group (organization name)-->
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="company_name">Doctor's Comapny Name</label>
+                                            <input class="form-control" id="company_name" formControlName="company_name" type="text" placeholder="Enter the Comapny name" value="">
+                                        </div>
+                                        <!-- Form Group (location)-->
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="address">Location</label>
+                                            <input class="form-control" id="address" formControlName="address" type="text" placeholder="Enter the Address" value="">
+                                        </div>
+                                    </div>
+                                    <!-- Form Group (email address)-->
+                                    <div class="mb-3">
+                                        <label class="small mb-1" for="email">Email address</label>
+                                        <input class="form-control" id="email" formControlName="email" type="email" placeholder="Enter your email address" value="">
+                                    </div>
+                                    <!-- Form Row-->
+                                    <div class="row gx-3 mb-3">
+                                        <!-- Form Group (phone number)-->
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="phone_number">Phone number</label>
+                                            <input class="form-control" id="phone_number" formControlName="phone_number" type="text" placeholder="Enter your phone number" value="">
+                                        </div>
+                                        <!-- Form Group (birthday)-->
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="gender">Gender</label>
+                                            <input class="form-control" id="gender" formControlName="gender" type="text" name="gender" placeholder="Enter the Gender" value="">
+                                        </div>
+                                    </div>
+
+                                   
+
+                                    <!-- Save changes button-->
+                                    <div class="row gutters">
+                                      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                          <div class="text-left">
+                                              <button type="submit" id="submit" name="submit" class="btn btn-primary">Add</button>
+                                              <br><br>
+                                              <button type="submit" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+                                          </div>
+                                          
+                                      </div>
+                                  </div>
+                                    <!--button class="btn btn-primary" type="submit=">Add</button>-->
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+  
+            
+          </div>
+        </div>
+      </main>
+      <footer class="c-footer">
+        <div><a href="">Doctors Appointment </a> © 2021 DAWS.</div>
+        <div class="ml-auto">Powered by <a href="">DAWS</a></div>
+      </footer>
+    </div>
+</div>

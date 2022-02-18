@@ -1,0 +1,47 @@
+<ion-content>
+  <ion-card id="around-wrapper">
+    <ion-item id="custom-wrapper">
+      <ion-icon id="icon" name="search-outline"></ion-icon>
+      <ion-input id="input" placeholder="search a doctor"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <div id="container">
+    <h5>Appointment Today</h5>
+    <h3>See All</h3>
+  </div>
+
+  <ion-card id="appointment-today">
+    <div id="container">
+      <img id="img" src="../../../assets/Dr. Usman Yousaf.jpeg" />
+      <div id="container-text">
+        <h2>Dr. Usman Yousaf</h2>
+        <h4>Heart Specialis</h4>
+      </div>
+    </div>
+    <!-- <div id="content-holder">
+      <ion-item id="apointment-detail">
+        <ion-icon name="calendar">Date</ion-icon>
+      </ion-item>
+    </div> -->
+  </ion-card>
+
+  <div id="container">
+    <h5>Doctors</h5>
+  </div>
+
+  <!-- List doctors -->
+  <ion-card *ngFor="let doctor of doctors" id="doc-text" routerLink="/doctor">
+    <div id="around">
+      <img src="../../../assets/Dr. Usman Yousaf.jpeg" />
+      <div>
+        <h4 (click)="showDoctorDetails(doctor)">
+          Dr <span>{{ doctor.first_name }} {{ doctor.last_name }}</span>
+        </h4>
+        <h6>Heart Specialist</h6>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>
+
+<!-- Tabs -->

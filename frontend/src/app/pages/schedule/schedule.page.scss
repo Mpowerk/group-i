@@ -1,0 +1,78 @@
+* {
+    --ion-background-color: #ffff;
+}
+
+#background {
+    background-image: url('../../../assets/undraw/undraw_booking.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: center;
+    height: 100%;
+}
+
+.top-header {
+    background: #575CE5;
+    height: 8rem;
+
+    #header {
+        display: flex;
+        padding: 1rem 0.5rem;
+
+        ion-button {
+            height: 50px;
+            font-weight: 500;
+            letter-spacing: .2rem;
+
+            ion-icon {
+                font-size: 2rem; 
+                color: #fff;
+            }
+        }
+    }
+}
+
+ion-card {
+    background: #fff;
+    #container {
+        padding: 10px;
+
+        img {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+            border: 1px solid #575CE5;
+            object-fit: cover;
+            float: left;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #575CE5;
+            letter-spacing: .2rem;
+            text-align: center;
+        }
+        h4 {
+            color: #B3B4CD;
+            letter-spacing: .1rem;
+            text-align: center;
+        }
+    }
+
+    #group-buttons {
+        margin-top: 2.5rem;
+        --border-style: none;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        #cancel {
+            color: #B5B5B5;
+            //--background: #fff;
+            width: 10rem;
+        }
+        #reschedule {
+            --background: #00BFA6;
+            width: 10rem;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.top-header {
+    background: #575CE5;
+    height: 8rem;
+
+    #header {
+        display: flex;
+        padding: 1rem 0.5rem;
+
+        ion-button {
+            height: 50px;
+
+            ion-icon {
+                font-size: 2rem; 
+                color: #fff;
+            }
+        }
+    }
+}
+
+#image {
+    padding: 10px;
+
+    img {
+        height: 12rem;
+        width: 12rem;
+        border-radius: 50%;
+        border: 1px solid #575CE5;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#title {
+    margin: 1rem;
+    h4 {
+        color: #000000;
+        font-weight: 500;
+    }
+}

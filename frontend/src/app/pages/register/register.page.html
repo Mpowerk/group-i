@@ -1,0 +1,60 @@
+<ion-content class="ion-padding">
+  <h1>Create Account,</h1>
+  <h5>Already have an account? <a routerLink="/login">Sign In</a></h5>
+  <form [formGroup]="myForm" (submit)="onSubmit()" novalidate>
+    <div *ngIf="currentError" style="color: red; margin-bottom: 10px">
+      {{ currentError }}
+    </div>
+    <ion-card id="around-wrapper">
+      <ion-item id="custom-wrapper">
+        <ion-icon id="icon" name="person-outline"></ion-icon>
+        <ion-input
+          id="input"
+          placeholder="first name"
+          formControlName="first_name"
+        ></ion-input>
+        <ion-icon id="icon" name="person-outline"></ion-icon>
+        <ion-input
+          id="input"
+          placeholder="last name"
+          formControlName="last_name"
+        ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card id="around-wrapper">
+      <ion-item id="custom-wrapper">
+        <ion-icon id="icon" name="call-outline"></ion-icon>
+        <ion-input
+          type="text"
+          id="input"
+          placeholder="phone number"
+          formControlName="phone_number"
+        ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card id="around-wrapper">
+      <ion-item id="custom-wrapper">
+        <ion-icon id="icon" name="mail-outline"></ion-icon>
+        <ion-input
+          type="email"
+          id="input"
+          placeholder="email"
+          formControlName="email"
+        ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card id="around-wrapper">
+      <ion-item id="custom-wrapper">
+        <ion-icon id="icon" name="lock-closed-outline"></ion-icon>
+        <ion-input
+          type="password"
+          id="input"
+          placeholder="re-type password"
+          formControlName="password"
+        ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-button expand="block" size="small" type="submit">Register</ion-button>
+  </form>
+</ion-content>
+

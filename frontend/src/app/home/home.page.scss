@@ -1,0 +1,19 @@
+
+
+ion-tabs {
+  background: #fff;
+  border-top: 1px solid #961aa7;
+
+  ion-tab-bar {
+    padding: 5px 0;
+    border-radius: 10px;
+    margin: 10px;
+
+    ion-tab-button {
+      ion-icon {
+        font-size: 1.5rem;
+        color: #575CE5;
+      }
+    }
+  }
+}
